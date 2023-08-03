@@ -1,0 +1,52 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.0.RELEASE' // Update to the latest Spring Boot version
+    }
+    repositories {
+        maven { url "https://repo1.maven.org/maven2" }
+        mavenLocal()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+    maven { url "https://maven.springframework.org/milestone" }
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-data-mongodb:${springBootVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-aop:${springBootVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-security:${springBootVersion}"
+    implementation "org.springframework.security:spring-security-config:${springBootVersion}"
+    implementation "org.springframework.security.oauth:spring-security-oauth2:2.5.0.RELEASE"
+    implementation "org.springframework.security.oauth:spring-security-oauth2-javaconfig:1.0.0.M1"
+    implementation "org.springframework.data:spring-data-rest-webmvc:3.0.0.RELEASE"
+    implementation "com.squareup.retrofit:retrofit:1.6.0"
+    implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
+    implementation "com.google.code.gson:gson:2.8.9"
+    compileOnly "org.projectlombok:lombok:1.18.28"
+    annotationProcessor "org.projectlombok:lombok:1.18.28"
+
+
+    testImplementation 'com.google.guava:guava:30.1-jre'
+    testImplementation 'commons-io:commons-io:2.11.0'
+    testImplementation 'org.codehaus.groovy:groovy:3.0.9'
+    testImplementation 'org.apache.httpcomponents:httpclient:4.5.14'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation 'org.springframework.security:spring-security-test:5.8.2'
+    testImplementation 'org.mockito:mockito-core:3.2.4'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.0'
+}
