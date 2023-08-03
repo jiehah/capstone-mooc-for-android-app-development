@@ -1,0 +1,59 @@
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.symptommanagement.admin.Physician.AdminPhysicianDetailFragment">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Physician Details :"
+                android:textStyle="bold"
+                android:height="@android:dimen/app_icon_size"
+                android:id="@+id/physician_details_heading_x"/>
+
+        <EditText
+                android:id="@+id/admin_physician_edit_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="@android:dimen/app_icon_size"
+                android:hint="Physician First Name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName|textCapWords"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <EditText
+                android:id="@+id/admin_physician_edit_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="@android:dimen/app_icon_size"
+                android:hint="Physician Last Name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName|textCapWords"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <Button
+                android:id="@+id/save_physician_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/sm_blue"
+                android:layout_marginTop="16dp"
+                android:text="Save Physician">
+        </Button>
+
+    </LinearLayout>
+</ScrollView>

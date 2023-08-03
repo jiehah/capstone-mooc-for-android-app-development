@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              tools:context="com.example.symptommanagement.physician.PhysicianPatientDetailActivity"
+              android:orientation="vertical">
+
+    <FrameLayout
+            android:id="@+id/physician_patient_detail_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <FrameLayout
+            android:id="@+id/patient_graphics_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</LinearLayout>
+

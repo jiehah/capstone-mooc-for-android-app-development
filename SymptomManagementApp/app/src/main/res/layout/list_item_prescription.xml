@@ -1,0 +1,29 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:showDividers="beginning|none|middle|end"
+        android:divider="@color/sm_blue"
+        style="?android:buttonBarStyle"
+        android:padding="16dp">
+
+    <TextView
+            android:id="@+id/prescription_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:text="OxyContin"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <ImageButton
+            android:id="@+id/prescription_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@android:drawable/ic_menu_delete"
+            style="?android:attr/borderlessButtonStyle"
+            android:paddingEnd="24dp"/>
+
+</LinearLayout>

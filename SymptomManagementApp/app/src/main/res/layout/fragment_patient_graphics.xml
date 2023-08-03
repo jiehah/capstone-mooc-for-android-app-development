@@ -1,0 +1,155 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/sample_activity"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+    <LinearLayout
+            android:id="@+id/graphics_button_bar"
+            android:background="@color/light_grey"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:minWidth="50dp"
+            android:orientation="horizontal"
+            style="?android:buttonBarStyle"
+            android:padding="12dp">
+
+        <ImageButton
+                android:id="@+id/line_plot"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:contentDescription="Line Graph"
+                android:src="@drawable/ic_action_line_chart"
+                android:minWidth="60dp"
+                android:background="@null"
+                android:text="Line Graph"/>
+
+        <ImageButton
+                android:id="@+id/bar_plot"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:contentDescription="Bar Chart"
+                android:src="@drawable/ic_action_bar_chart"
+                android:minWidth="60dp"
+                android:background="@null"
+                android:text="Bar Chart"/>
+
+        <ImageButton
+                android:id="@+id/scatter_plot"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:contentDescription="Scatter Chart"
+                android:src="@drawable/ic_action_scatter_plot"
+                android:minWidth="60dp"
+                android:background="@null"
+                android:text="Scatter Chart"/>
+
+
+        <ImageButton
+                android:id="@+id/pie_plot"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:contentDescription="Pie"
+                android:src="@drawable/ic_action_pie_chart"
+                android:minWidth="60dp"
+                android:background="@null"
+                android:text="Pie Chart"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/xy_chart_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+
+        <LinearLayout
+                android:id="@+id/graph_choices_layout"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+            <CheckBox android:id="@+id/graph_choice_1"
+                      android:checked="true"
+                      android:text="Severity Level"
+                      android:textSize="12dp"
+                      android:textStyle="normal"
+                      android:layout_height="wrap_content"
+                      android:layout_width="fill_parent"
+                      android:layout_marginEnd="5dp"/>
+            <CheckBox android:id="@+id/graph_choice_2"
+                      android:text="Eating Ability"
+                      android:textSize="12dp"
+                      android:textStyle="normal"
+                      android:checked="true"
+                      android:layout_height="wrap_content"
+                      android:layout_width="fill_parent"/>
+        </LinearLayout>
+
+        <com.androidplot.xy.XYPlotZoomPan
+                android:id="@+id/patientGraphicsPlot"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="8dp"
+                android:focusable="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/pie_chart_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:id="@+id/pie_chart_radio_group">
+
+            <RadioButton
+                    android:id="@+id/pie_chart_severity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pain Severity"
+                    android:textSize="12sp"
+                    android:textStyle="normal"/>
+
+            <RadioButton
+                    android:id="@+id/pie_chart_eating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eating Ability"
+                    android:textSize="12sp"
+                    android:textStyle="normal"/>
+
+        </RadioGroup>
+
+        <com.androidplot.pie.PieChart
+                android:id="@+id/PatientPieChart"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

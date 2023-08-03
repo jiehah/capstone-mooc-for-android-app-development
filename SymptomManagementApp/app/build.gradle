@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.example.symptommanagement"
+        minSdkVersion 24
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    viewBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.google.guava:guava:21.0"
+    implementation "com.android.support:support-v4:26.1.0"
+    implementation "com.squareup.picasso:picasso:2.3.2"
+    implementation "com.squareup.retrofit:retrofit:1.7.0"
+    implementation "com.google.code.gson:gson:2.10.1"
+    implementation "commons-io:commons-io:2.11.0"
+    implementation "com.androidplot:androidplot-core:0.6.1"
+    implementation "org.apache.httpcomponents:httpcore:4.4.16"
+    compileOnly "org.projectlombok:lombok:1.18.28"
+    annotationProcessor "org.projectlombok:lombok:1.18.28"
+}

@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <FrameLayout
+            android:id="@+id/main_admin_title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/sm_grey_dark">
+
+        <TextView
+                android:id="@+id/adminTitleView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/admin_main_title"
+                android:gravity="center_horizontal"
+                android:textColor="@color/sm_cream_white"
+                android:textSize="24sp"
+                android:layout_margin="8dp"/>
+
+    </FrameLayout>
+
+    <Button
+            android:id="@+id/edit_physicians_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:background="@color/sm_blue"
+            android:textColor="@color/sm_cream_white"
+            android:minWidth="350dp"
+            android:text="Edit Physicians"
+            android:layout_below="@+id/edit_patients_button"
+            android:layout_centerHorizontal="true"/>
+
+    <Button
+            android:id="@+id/edit_patients_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edit_physicians_button"
+            android:layout_alignStart="@+id/edit_physicians_button"
+            android:layout_below="@+id/main_admin_title_layout"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/main_admin_title_layout"
+            android:background="@color/sm_blue"
+            android:textColor="@color/sm_cream_white"
+            android:minWidth="350dp"
+            android:text="Edit Patients"/>
+
+</RelativeLayout>

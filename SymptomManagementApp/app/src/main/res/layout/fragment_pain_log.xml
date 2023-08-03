@@ -1,0 +1,113 @@
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_margin="4dp"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
+
+        <TextView
+                android:id="@+id/severity_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pain_log_mouth_pain_question"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_centerHorizontal="true"
+                android:minWidth="400dp"/>
+
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/severity_heading"
+                android:id="@+id/severity_radio_group"
+                android:layout_centerHorizontal="true"
+                android:minWidth="400dp">
+
+            <RadioButton
+                    android:id="@+id/well_controlled_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/pain_log_well_controlled"/>
+
+            <RadioButton
+                    android:id="@+id/moderate_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/pain_log_moderate"/>
+
+            <RadioButton
+                    android:id="@+id/severe_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/pain_log_severe"/>
+
+        </RadioGroup>
+
+        <TextView
+                android:id="@+id/eating_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pain_log_eating_drinking_question"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/severity_radio_group"
+                android:layout_marginTop="24dp"
+                android:layout_centerHorizontal="true"
+                android:minWidth="400dp"/>
+
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eating_heading"
+                android:id="@+id/eating_radio_group"
+                android:layout_centerHorizontal="true"
+                android:minWidth="400dp">
+
+
+            <RadioButton
+                    android:id="@+id/eating_ok_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/pain_log_eating"/>
+
+            <RadioButton
+                    android:id="@+id/eating_some_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/pain_log_eating_some"/>
+
+            <RadioButton
+                    android:id="@+id/not_eating_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/pain_log_cannot_eat"/>
+
+        </RadioGroup>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:id="@+id/pain_log_done_button"
+                android:layout_below="@+id/eating_radio_group"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:minWidth="400dp"
+                android:background="@color/sm_blue"/>
+
+    </RelativeLayout>
+
+</ScrollView>

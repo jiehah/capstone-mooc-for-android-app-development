@@ -1,0 +1,27 @@
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <CheckBoxPreference
+            android:title="@string/pref_enable_notifications_label"
+            android:key="@string/pref_enable_notifications_key"
+            android:summaryOff="@string/pref_enable_notifications_false"
+            android:summaryOn="@string/pref_enable_notifications_true"
+            android:defaultValue="@string/pref_enable_notifications_default"/>
+
+    <CheckBoxPreference
+            android:title="@string/pref_enable_reminder_snooze"
+            android:key="@string/pref_enable_reminder_snooze_key"
+            android:summaryOff="@string/pref_enable_reminder_snooze_false"
+            android:summaryOn="@string/pref_enable_reminder_snooze_true"
+            android:defaultValue="@string/pref_enable_reminder_snooze_default"/>
+
+    <CheckBoxPreference
+            android:title="@string/pref_popup_reminder"
+            android:key="@string/pref_popup_reminder_key"
+            android:summaryOff="@string/pref_popup_reminder_false"
+            android:summaryOn="@string/pref_popup_reminder_true"
+            android:defaultValue="@string/pref_popup_reminder_default"/>
+
+</PreferenceScreen>
